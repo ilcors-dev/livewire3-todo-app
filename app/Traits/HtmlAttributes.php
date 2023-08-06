@@ -4,8 +4,17 @@ namespace App\Traits;
 
 use TailwindMerge\TailwindMerge;
 
-trait Classeable
+trait HtmlAttributes
 {
+    public string $id;
+
+    public int $tabIndex;
+
+    public string $hidden;
+
+    public string $style;
+
+
     public string $class = '';
 
     /**

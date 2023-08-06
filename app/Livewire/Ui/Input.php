@@ -2,12 +2,12 @@
 
 namespace App\Livewire\Ui;
 
-use App\Traits\Classeable;
+use App\Traits\HtmlAttributes;
 use Livewire\Component;
 
 class Input extends Component
 {
-    use Classeable;
+    use HtmlAttributes;
 
     public string $id;
 
