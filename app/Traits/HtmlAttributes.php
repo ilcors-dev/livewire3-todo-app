@@ -14,7 +14,6 @@ trait HtmlAttributes
 
     public string $style;
 
-
     public string $class = '';
 
     /**

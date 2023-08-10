@@ -1,4 +1,1 @@
-<input type="text"
-       id="{{ $id }}"
-       class="{{ $class }}"
-       placeholder="{{ $placeholder }}" />
+<input type="text" id="{{ $id }}" class="{{ $class }}" placeholder="{{ $placeholder }}" />
