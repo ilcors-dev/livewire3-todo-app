@@ -9,13 +9,11 @@ class Input extends Component
 {
     use HtmlAttributes;
 
-    public string $id;
-
     public ?string $label;
 
     public string $value;
 
-    public ?string $placeholder = "miao";
+    public ?string $placeholder = "";
 
     public function mount()
     {
