@@ -17,14 +17,14 @@ trait HtmlAttributes
     public string $class = '';
 
     /**
-     * Merges the
+     * Merges the passed class from the user with the default class.
      *
-     * @param string $class
-     * @return void
+     * @param string $class the classes to merge
+     * @return string
      */
-    public function mergeClasses(string $class): void
+    public function mergeClasses(string ...$class): string
     {
-        $this->class = TailwindMerge::factory()->make()->merge($this->class, $class);
+        return TailwindMerge::factory()->make()->merge($this->class, $class);
     }
 
     /**

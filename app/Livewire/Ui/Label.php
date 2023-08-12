@@ -13,11 +13,6 @@ class Label extends Component
 
     public string $text;
 
-    public function mount(): void
-    {
-        $this->mergeClasses("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70");
-    }
-
     public function render()
     {
         return view('livewire.ui.label');
