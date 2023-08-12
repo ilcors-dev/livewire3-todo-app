@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" x-data="{ darkMode: (localStorage.getItem('darkMode') && localStorage.getItem('darkMode') === 'true') }" x-bind:class="darkMode ? 'dark' : ''"
+    x-cloak
     x-on:dark-mode-toggle.window="($event) => {
         darkMode = $event.detail.checked;
         localStorage.setItem('darkMode', darkMode);
