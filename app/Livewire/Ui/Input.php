@@ -2,16 +2,14 @@
 
 namespace App\Livewire\Ui;
 
-use App\Traits\HtmlAttributes;
 use Livewire\Component;
+use App\Traits\HtmlAttributes;
 
 class Input extends Component
 {
     use HtmlAttributes;
 
-    public ?string $label;
-
-    public string $value;
+    public string $type = "text";
 
     public ?string $placeholder = "";
 
