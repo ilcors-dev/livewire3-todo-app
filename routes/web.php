@@ -1,17 +1,16 @@
 <?php
 
-use App\Livewire\SignIn;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::get('/', \App\Livewire\SignIn::class)->name('auth.sign-in');
+Route::get('/sign-up', \App\Livewire\SignUp::class)->name('auth.sign-up');
 
-Route::get('/', SignIn::class)->name('auth.login');
+Route::middleware('auth')->group(function () {
+    Route::get('/sign-out', function () {
+        auth()->logout();
+
+        return redirect()->route('auth.sign-in');
+    })->name('auth.sign-out');
+
+    Route::get('/home', \App\Livewire\Home::class)->name('home');
+});
