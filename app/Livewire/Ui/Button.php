@@ -15,7 +15,7 @@ class Button extends Component
         'danger' => 'bg-red-500 text-white hover:bg-red-600 focus:ring-red-600',
         'success' => 'bg-green-500 text-white hover:bg-green-600 focus:ring-green-600',
         'outline' => 'border border-black text-black hover:bg-gray-50 focus:ring-black',
-        'link' => 'text-black hover:underline focus:ring-black',
+        'link' => 'hover:underline focus:ring-black cursor-pointer',
     ];
 
     public string $variant = 'primary';
