@@ -3,9 +3,13 @@
 namespace App\Livewire\Ui;
 
 use Livewire\Component;
+use App\Traits\HtmlAttributes;
+use Livewire\Attributes\Modelable;
 
 class Toggle extends Component
 {
+    use HtmlAttributes;
+
     public $size = 'md';
 
     public $sizeClasses = [
@@ -15,8 +19,7 @@ class Toggle extends Component
         'xl' => ['wrapper' => 'h-7 w-12', 'circle' => 'h-5 w-5 checked:translate-x-5 left-0.5']
     ];
 
-    public $class = '';
-
+    #[Modelable]
     public $checked = false;
 
     public function render()
