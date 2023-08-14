@@ -20,11 +20,33 @@ class Button extends Component
 
     public string $variant = 'primary';
 
+    /**
+     * The text to show on the button.
+     * 
+     * @var string|null
+     */
     public ?string $label;
 
+    /**
+     * The icon name (component name) to show on the left side of the button.
+     *
+     * @var string|null
+     */
     public ?string $leftIcon;
 
+    /**
+     * The icon name (component name) to show on the right side of the button.
+     *
+     * @var string|null
+     */
     public ?string $rightIcon;
+
+    /**
+     * The button type.
+     *
+     * @var string supported types are button|submit|reset
+     */
+    public string $type = 'button';
 
     public function render()
     {
