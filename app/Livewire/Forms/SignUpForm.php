@@ -20,12 +20,15 @@ class SignUpForm extends Form
     #[Rule(['required'])]
     public string $password_confirmation = '';
 
+    #[Rule(['required', 'unique:users,handle'])]
+    public string $handle = '';
+
     public function store(): User
     {
         $this->validate();
 
         $user = User::create(
-            $this->only(['name', 'email', 'password'])
+            $this->only(['name', 'email', 'password', 'handle'])
         );
 
         return $user;

@@ -12,6 +12,16 @@
                     @enderror
                 </div>
                 <div>
+                    <livewire:ui.label for="handle" text="your handle" />
+                    <livewire:ui.input id="handle" type="handle" name="handle" placeholder="handle"
+                        wire:model="form.handle" />
+                    @error('form.handle')
+                        <small>
+                            <span class="text-red-500">{{ $message }}</span>
+                        </small>
+                    @enderror
+                </div>
+                <div>
                     <livewire:ui.label for="email" text="email" />
                     <livewire:ui.input id="email" type="email" name="email" placeholder="email"
                         wire:model="form.email" />
