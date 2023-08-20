@@ -11,14 +11,14 @@ class Home extends Component
     public $posts;
 
     #[On('post:created')]
-    public function refreshPosts()
+    public function getPosts()
     {
-        $this->posts = Post::query()->latest()->get();
+        $this->posts = Post::query()->latest()->with('user:name,handle,id')->get();
     }
 
     public function render()
     {
-        $this->posts = Post::query()->latest()->get();
+        $this->getPosts();
 
         return view('livewire.home');
     }
