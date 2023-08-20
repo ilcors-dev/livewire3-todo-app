@@ -3,7 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use App\Livewire\Forms\Forms\SignInForm;
+use App\Livewire\Forms\SignInForm;
 
 class SignIn extends Component
 {

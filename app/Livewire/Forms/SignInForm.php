@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Forms\Forms;
+namespace App\Livewire\Forms;
 
 use App\Models\User;
 use Livewire\Form;
