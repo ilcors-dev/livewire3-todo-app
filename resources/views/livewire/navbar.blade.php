@@ -1,5 +1,5 @@
 <div class="flex h-20 w-full justify-between p-6 px-5 sm:px-10">
-    <p class="text-4xl font-bold text-gray-800 dark:text-neutral-50">todos</p>
+    <h2 class="text-gray-800 dark:text-neutral-50">todos</h2>
     <div class="flex items-center space-x-4 lg:space-x-10">
         @if (!auth()->check())
             <livewire:ui.link spa href="{{ route('auth.sign-in') }}" text="login" />
