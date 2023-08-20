@@ -17,6 +17,8 @@ class Input extends Component
 
     public ?string $placeholder = "";
 
+    public bool $autocomplete = true;
+
     public function render()
     {
         return view('livewire.ui.input');
