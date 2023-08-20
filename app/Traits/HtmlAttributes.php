@@ -8,6 +8,8 @@ trait HtmlAttributes
 {
     public string $id = '';
 
+    public string $name = '';
+
     public int $tabIndex = 1;
 
     public string $hidden = '';
@@ -36,6 +38,7 @@ trait HtmlAttributes
     {
         $attributes = [
             'id' => $this->id,
+            'name' => $this->name,
             'tabindex' => $this->tabIndex,
             'hidden' => $this->hidden,
             'style' => $this->style,
