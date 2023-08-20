@@ -1,4 +1,4 @@
-<div class="flex h-20 w-full justify-between p-6 px-5 sm:px-10">
+<nav class="sticky top-0 flex h-20 w-full justify-between p-6 px-5 sm:px-10">
     <h2 class="text-gray-800 dark:text-neutral-50">todos</h2>
     <div class="flex items-center space-x-4 lg:space-x-10">
         @if (!auth()->check())
@@ -13,4 +13,4 @@
             <x-lucide-moon class="h-6 w-6 dark:text-white" />
         </div>
     </div>
-</div>
+</nav>
