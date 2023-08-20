@@ -19,7 +19,9 @@
 
 <body class="h-screen bg-amber-300 dark:bg-gray-800">
     <livewire:navbar />
-    {{ $slot }}
+    <main>
+        {{ $slot }}
+    </main>
 </body>
 
 </html>
