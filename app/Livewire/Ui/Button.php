@@ -16,6 +16,7 @@ class Button extends Component
         'success' => 'bg-green-500 text-white hover:bg-green-600 focus:ring-green-600',
         'outline' => 'border border-black text-black hover:bg-gray-50 focus:ring-black',
         'link' => 'hover:underline focus:ring-black cursor-pointer',
+        'icon' => 'cursor-pointer p-px'
     ];
 
     public string $variant = 'primary';

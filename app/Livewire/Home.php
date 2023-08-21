@@ -13,7 +13,10 @@ class Home extends Component
     #[On('post:created')]
     public function getPosts()
     {
-        $this->posts = Post::query()->latest()->with('user:name,handle,id')->get();
+        $this->posts = Post::query()->latest()
+            ->with('user:name,handle,id')
+            ->withCount('likes')
+            ->get();
     }
 
     public function render()
