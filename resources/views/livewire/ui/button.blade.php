@@ -6,7 +6,9 @@
         @svg($leftIcon, ['class' => 'h-4 w-4'])
     @endif
 
-    <span>{{ $label }}</span>
+    @if ($label)
+        <span>{{ $label }}</span>
+    @endif
 
     @isset($rightIcon)
         @svg($rightIcon, ['class' => 'h-4 w-4'])
